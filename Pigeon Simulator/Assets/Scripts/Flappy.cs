@@ -29,9 +29,9 @@ public class Flappy : MonoBehaviour
     private void Start()
     {
 
-        left = GameObject.Find("Left");
-        right = GameObject.Find("Right");
-        body = GameObject.Find("Body");
+        //left = GameObject.Find("Left");
+        //right = GameObject.Find("Right");
+        //body = GameObject.Find("Body");
 
         //camera = body.GetComponent<Camera>();
 
@@ -60,6 +60,8 @@ public class Flappy : MonoBehaviour
         UpdateRotation();
         UpdatePlayerVelocity();
         UpdateAccels();
+
+        gameObject.transform.position = body.transform.position;
     }
 
     private void LiftLeft()
